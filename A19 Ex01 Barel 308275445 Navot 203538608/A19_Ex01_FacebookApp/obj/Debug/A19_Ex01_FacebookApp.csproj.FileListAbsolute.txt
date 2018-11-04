@@ -1,0 +1,13 @@
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.csprojAssemblyReference.cache
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.LoginForm.resources
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.Properties.Resources.resources
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.csproj.GenerateResource.cache
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.csproj.CoreCompileInputs.cache
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookApp.exe
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookApp.pdb
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\Facebook.dll
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\FbGraphApiWrapper.dll
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.csproj.CopyComplete
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.exe
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.pdb
+C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.MainForm.resources
