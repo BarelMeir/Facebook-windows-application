@@ -1,6 +1,6 @@
-﻿namespace A19_Ex01_FacebookApp
+﻿namespace A19_Ex01_FacebookAppUI
 {
-    partial class MainForm
+    partial class FacebookUIForm
     {
         /// <summary>
         /// Required designer variable.

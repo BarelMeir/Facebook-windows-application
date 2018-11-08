@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace A19_Ex01_FacebookApp
+namespace A19_Ex01_FacebookAppUI
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace A19_Ex01_FacebookApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new FacebookUIForm());
         }
     }
 }

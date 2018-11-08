@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace A19_Ex01_FacebookApp.Properties
+namespace A19_Ex01_FacebookAppUI.Properties
 {
 
 

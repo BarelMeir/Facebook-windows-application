@@ -8,70 +8,24 @@ using System.Text;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
+using A19_Ex01_FacebookAppLogic;
 
-namespace A19_Ex01_FacebookApp
+namespace A19_Ex01_FacebookAppUI
 {
     public partial class LoginForm : Form
     {
-        private User m_LoggedInUser;
+        private FacebookLogicHandler m_LogicHandler;
 
         public LoginForm()
         {
+            m_LogicHandler = FacebookLogicHandler.GetLogicHandler();
             InitializeComponent();
         }
 
-        internal User LoggedInUser { get { return m_LoggedInUser; }  }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            loginAndInit();
-        }
-
-        private void loginAndInit()
-        {
-            /// Owner: design.patterns
-
-            /// Use the FacebookService.Login method to display the login form to any user who wish to use this application.
-            /// You can then save the result.AccessToken for future auto-connect to this user:
-            LoginResult result = FacebookService.Login("1450160541956417", /// (desig patter's "Design Patterns Course App 2.4" app)
-                "public_profile",
-                "user_birthday",
-                "user_friends",
-                "user_events",
-                //"user_groups" (This permission is only available for apps using Graph API version v2.3 or older.)
-                "user_hometown",
-                "user_likes",
-                "user_location",
-                "user_photos",
-                "user_posts",
-
-                //"user_status" (This permission is only available for apps using Graph API version v2.3 or older.)
-                "user_tagged_places",
-                "user_videos",
-
-                // "read_mailbox", (This permission is only available for apps using Graph API version v2.3 or older.)
-                "read_page_mailboxes",
-                // "read_stream", (This permission is only available for apps using Graph API version v2.3 or older.)
-                // "manage_notifications", (This permission is only available for apps using Graph API version v2.3 or older.)
-                "manage_pages",
-                "publish_pages"
-
-                );
-            // These are NOT the complete list of permissions. Other permissions for example:
-            // "user_birthday", "user_education_history", "user_hometown", "user_likes","user_location","user_relationships","user_relationship_details","user_religion_politics", "user_videos", "user_website", "user_work_history", "email","read_insights","rsvp_event","manage_pages"
-            // The documentation regarding facebook login and permissions can be found here: 
-            // https://developers.facebook.com/docs/facebook-login/permissions#reference
-
-
-            if (!string.IsNullOrEmpty(result.AccessToken))
-            {
-                m_LoggedInUser = result.LoggedInUser;
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show(result.ErrorMessage);
-            }
+            m_LogicHandler.Login();
+            this.Close();
         }
     }
 }

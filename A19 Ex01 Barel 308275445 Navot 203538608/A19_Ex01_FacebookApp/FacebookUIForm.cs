@@ -8,18 +8,17 @@ using System.Text;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
+using A19_Ex01_FacebookAppLogic;
 
-namespace A19_Ex01_FacebookApp
+namespace A19_Ex01_FacebookAppUI
 {
-    public partial class MainForm : Form
+    public partial class FacebookUIForm : Form
     {
         private LoginForm m_LoginForm = new LoginForm();
-        private User m_LoggedInUser;
 
-        public MainForm()
+        public FacebookUIForm()
         {
             m_LoginForm.ShowDialog();
-            m_LoggedInUser = m_LoginForm.LoggedInUser;
             InitializeComponent();
             fetchUserInfo();
         }
@@ -56,17 +55,16 @@ namespace A19_Ex01_FacebookApp
             this.ClientSize = new System.Drawing.Size(2032, 1233);
             this.Controls.Add(this.pictureBoxProfilePicture);
             this.Controls.Add(this.labelMyProfile);
-            this.Name = "Signed in as " + m_LoggedInUser.Name;
+            this.Name = "Signed in as ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-
         private void fetchUserInfo()
         {
-            pictureBoxProfilePicture.LoadAsync(m_LoggedInUser.PictureNormalURL);
+            
         }
 
     }

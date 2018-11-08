@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace A19_Ex01_FacebookApp.Properties
+namespace A19_Ex01_FacebookAppUI.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace A19_Ex01_FacebookApp.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("A19_Ex01_FacebookApp.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("A19_Ex01_FacebookAppUI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

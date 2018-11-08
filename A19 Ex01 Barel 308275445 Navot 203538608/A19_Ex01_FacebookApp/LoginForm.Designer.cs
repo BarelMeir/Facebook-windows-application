@@ -1,4 +1,4 @@
-﻿namespace A19_Ex01_FacebookApp
+﻿namespace A19_Ex01_FacebookAppUI
 {
     partial class LoginForm
     {
