@@ -13,3 +13,16 @@ C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Na
 C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.pdb
 C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookAppLogic.dll
 C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookAppLogic.pdb
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookApp.exe
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookApp.pdb
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookAppLogic.dll
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\bin\Debug\A19_Ex01_FacebookAppLogic.pdb
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookAppUI.csprojAssemblyReference.cache
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookAppUI.LoginForm.resources
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookAppUI.FacebookUIForm.resources
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.Properties.Resources.resources
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookAppUI.csproj.GenerateResource.cache
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookAppUI.csproj.CoreCompileInputs.cache
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookAppUI.csproj.CopyComplete
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.exe
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookApp\obj\Debug\A19_Ex01_FacebookApp.pdb

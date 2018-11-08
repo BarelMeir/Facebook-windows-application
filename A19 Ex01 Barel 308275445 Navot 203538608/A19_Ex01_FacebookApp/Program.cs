@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using FacebookWrapper.ObjectModel;
+using FacebookWrapper;
+using A19_Ex01_FacebookAppLogic;
 using System.Windows.Forms;
 
 namespace A19_Ex01_FacebookAppUI

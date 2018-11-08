@@ -7,3 +7,10 @@ C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Na
 C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.csproj.CopyComplete
 C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.dll
 C:\Users\barbo\Documents\GitHub\Design Patterns\Ex01\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.pdb
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\bin\Debug\A19_Ex01_FacebookAppLogic.dll
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\bin\Debug\A19_Ex01_FacebookAppLogic.pdb
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.csprojAssemblyReference.cache
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.csproj.CoreCompileInputs.cache
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.csproj.CopyComplete
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.dll
+C:\Users\yaelslavin\Desktop\navot\design patterns\Facebook-windows-application\A19 Ex01 Barel 308275445 Navot 203538608\A19_Ex01_FacebookAppLogic\obj\Debug\A19_Ex01_FacebookAppLogic.pdb

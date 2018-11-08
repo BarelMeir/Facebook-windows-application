@@ -59,23 +59,21 @@ namespace A19_Ex01_FacebookAppLogic
             }
         }
 
-        internal List<string> FetchEvents()
+        internal List<Event> FetchEvents()
         {
             try
             {
-                List<string> eventsList = new List<string>();
+                List<Event> eventsList = new List<Event>();
 
                 if (m_LoggedInUser.Events.Count == 0)
                 {
-                    eventsList.Add("There are no events to show.");
+                    eventsList = null;
                 }
                 else
                 {
                     foreach (Event fbEvent in m_LoggedInUser.Events)
                     {
-                        string currentEvent = string.Empty;
-                        currentEvent = string.Format("{0} at {1}", fbEvent.Name, fbEvent.StartTime);
-                        eventsList.Add(currentEvent);
+                        eventsList.Add(fbEvent);
                     }
                 }
 
@@ -87,21 +85,21 @@ namespace A19_Ex01_FacebookAppLogic
             }
         }
 
-        internal List<string> FetchWallPosts()
+        internal List<Post> FetchWallPosts()
         {
             try
             {
-                List<string> postsList = new List<string>();
+                List<Post> postsList = new List<Post>();
 
                 if (m_LoggedInUser.WallPosts.Count == 0)
                 {
-                    postsList.Add("There are no wall posts to show.");
+                    postsList = null;
                 }
                 else
                 {
                     foreach (Post fbPost in m_LoggedInUser.Posts)
                     {
-                        postsList.Add(fbPost.Message);
+                        postsList.Add(fbPost);
                     }
                 }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FacebookWrapper.ObjectModel;
+using FacebookWrapper;
 
 namespace A19_Ex01_FacebookAppLogic
 {
@@ -44,7 +46,7 @@ namespace A19_Ex01_FacebookAppLogic
             }
         }
 
-        public List<string> GetEvents()
+        public List<Event> GetEvents()
         {
             try
             {
@@ -56,7 +58,7 @@ namespace A19_Ex01_FacebookAppLogic
             }
         }
 
-        public List<string> GetWallPosts()
+        public List<Post> GetWallPosts()
         {
             try
             {
