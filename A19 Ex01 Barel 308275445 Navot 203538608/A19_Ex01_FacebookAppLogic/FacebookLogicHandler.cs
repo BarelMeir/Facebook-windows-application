@@ -32,8 +32,6 @@ namespace A19_Ex01_FacebookAppLogic
             return m_LogicHandler;
         }
         
-
-
         public void Login()
         {
             try
@@ -41,6 +39,18 @@ namespace A19_Ex01_FacebookAppLogic
                 m_DataHandler.LoginAndInit();
             }
             catch(Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public List<string> GetEvents()
+        {
+            try
+            {
+                return m_DataHandler.FetchEvents();
+            }
+            catch (Exception exception)
             {
                 throw exception;
             }

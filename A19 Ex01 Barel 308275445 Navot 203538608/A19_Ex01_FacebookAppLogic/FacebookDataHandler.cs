@@ -59,5 +59,34 @@ namespace A19_Ex01_FacebookAppLogic
             }
         }
 
+        internal List<string> FetchEvents()
+        {
+            try
+            {
+                List<string> eventsList = new List<string>();
+
+                if (m_LoggedInUser.Events.Count == 0)
+                {
+                    eventsList.Add("There are no events to show.");
+                }
+                else
+                {
+                    foreach (Event fbEvent in m_LoggedInUser.Events)
+                    {
+                        string currentEvent = string.Empty;
+                        currentEvent = string.Format("{0} at {1}", fbEvent.Name, fbEvent.StartTime);
+                        eventsList.Add(currentEvent);
+                    }
+                }
+
+                return eventsList;
+            }
+            catch
+            {
+                throw new Exception("Could not load Events.");
+            }
+        }
+
+
     }
 }

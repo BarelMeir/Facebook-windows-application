@@ -15,11 +15,13 @@ namespace A19_Ex01_FacebookAppUI
     public partial class FacebookUIForm : Form
     {
         private LoginForm m_LoginForm = new LoginForm();
+        private FacebookLogicHandler m_LogicHandler;
 
         public FacebookUIForm()
         {
             m_LoginForm.ShowDialog();
             InitializeComponent();
+            m_LogicHandler = FacebookLogicHandler.GetLogicHandler();
             fetchUserInfo();
         }
 
@@ -64,7 +66,8 @@ namespace A19_Ex01_FacebookAppUI
 
         private void fetchUserInfo()
         {
-            
+            List<string> tst = m_LogicHandler.GetEvents();
+            tst.Count();
         }
 
     }
