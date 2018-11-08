@@ -87,6 +87,30 @@ namespace A19_Ex01_FacebookAppLogic
             }
         }
 
+        internal List<string> FetchWallPosts()
+        {
+            try
+            {
+                List<string> postsList = new List<string>();
 
+                if (m_LoggedInUser.WallPosts.Count == 0)
+                {
+                    postsList.Add("There are no wall posts to show.");
+                }
+                else
+                {
+                    foreach (Post fbPost in m_LoggedInUser.Posts)
+                    {
+                        postsList.Add(fbPost.Message);
+                    }
+                }
+
+                return postsList;
+            }
+            catch
+            {
+                throw new Exception("Could not load Wall.");
+            }
+        }
     }
 }

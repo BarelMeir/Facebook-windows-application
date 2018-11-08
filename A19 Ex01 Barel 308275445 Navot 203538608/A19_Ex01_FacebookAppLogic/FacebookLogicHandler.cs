@@ -55,5 +55,17 @@ namespace A19_Ex01_FacebookAppLogic
                 throw exception;
             }
         }
+
+        public List<string> GetWallPosts()
+        {
+            try
+            {
+                return m_DataHandler.FetchWallPosts();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
     }
 }
