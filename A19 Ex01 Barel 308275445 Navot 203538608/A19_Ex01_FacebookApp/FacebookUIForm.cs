@@ -66,8 +66,7 @@ namespace A19_Ex01_FacebookAppUI
 
         private void fetchUserInfo()
         {
-            List<string> tst = m_LogicHandler.GetWallPosts();
-            tst.Count();
+            m_LogicHandler.SetNewPost("hey");
         }
 
     }

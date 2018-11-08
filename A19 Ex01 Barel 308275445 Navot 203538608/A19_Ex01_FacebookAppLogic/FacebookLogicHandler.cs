@@ -67,5 +67,17 @@ namespace A19_Ex01_FacebookAppLogic
                 throw exception;
             }
         }
+
+        public void SetNewPost(string io_PostMessage)
+        {
+            try
+            {
+                m_DataHandler.SetNewPost(io_PostMessage);
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
     }
 }

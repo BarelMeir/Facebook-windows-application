@@ -19,7 +19,7 @@ namespace A19_Ex01_FacebookAppLogic
 
             /// Use the FacebookService.Login method to display the login form to any user who wish to use this application.
             /// You can then save the result.AccessToken for future auto-connect to this user:
-            LoginResult result = FacebookService.Login("1450160541956417", /// (desig patter's "Design Patterns Course App 2.4" app)
+            LoginResult result = FacebookService.Login("183018702606942", /// (desig patter's "Design Patterns Course App 2.4" app)
                 "public_profile",
                 "user_birthday",
                 "user_friends",
@@ -110,6 +110,19 @@ namespace A19_Ex01_FacebookAppLogic
             catch
             {
                 throw new Exception("Could not load Wall.");
+            }
+        }
+
+        internal void SetNewPost(string io_PostMessage)
+        {
+            try
+            {
+                m_LoggedInUser.PostStatus(io_PostMessage);
+            }
+            catch(Exception e)
+            {
+                throw e;
+                //throw new Exception("Could not create the post.");
             }
         }
     }
