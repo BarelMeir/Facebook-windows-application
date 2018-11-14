@@ -517,42 +517,61 @@ namespace A19_Ex01_FacebookAppUI
 
         private void listBoxData_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            object selectedItemAtListBox = listBoxData.SelectedItem;
-            object selectedItemLogical =  m_LogicDataForListBox[listBoxData.Items.IndexOf(selectedItemAtListBox)];
-
-            if (selectedItemLogical != null && m_CurrentDataState != eDataState.General)
+            try
             {
-                m_LastDataState = m_CurrentDataState;
-                saveCurrentStateData();
-                this.buttonBackListBox.Visible = true;
-                this.listBoxData.Items.Clear();
-                switch (m_CurrentDataState)
+                extandSelectedItem();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void extandSelectedItem()
+        {
+            try
+            {
+                object selectedItemAtListBox = listBoxData.SelectedItem;
+                object selectedItemLogical = m_LogicDataForListBox[listBoxData.Items.IndexOf(selectedItemAtListBox)];
+
+                if (selectedItemLogical != null && m_CurrentDataState != eDataState.General)
                 {
-                    case eDataState.Friends:
-                        selectedFriend(selectedItemLogical as User);
-                        break;
-                    case eDataState.Albums:
-                        //code
-                        break;
-                    case eDataState.Events:
-                        selectedEvent(selectedItemLogical as Event);
-                        break;
-                    case eDataState.WeekSummery:
-                        //code
-                        break;
-                    case eDataState.WallPosts:
-                        //code
-                        break;
-                    case eDataState.Trends:
-                        //code
-                        break;
-                    case eDataState.SetNewPost:
-                        //code
-                        break;
-                    default:
-                        //code
-                        break;
+                    m_LastDataState = m_CurrentDataState;
+                    saveCurrentStateData();
+                    this.buttonBackListBox.Visible = true;
+                    this.listBoxData.Items.Clear();
+                    switch (m_CurrentDataState)
+                    {
+                        case eDataState.Friends:
+                            selectedFriend(selectedItemLogical as User);
+                            break;
+                        case eDataState.Albums:
+                            selectedAlbum(selectedItemLogical as Album);
+                            break;
+                        case eDataState.Events:
+                            selectedEvent(selectedItemLogical as Event);
+                            break;
+                        case eDataState.WeekSummery:
+                            //code
+                            break;
+                        case eDataState.WallPosts:
+                            //code
+                            break;
+                        case eDataState.Trends:
+                            //code
+                            break;
+                        case eDataState.SetNewPost:
+                            //code
+                            break;
+                        default:
+                            //code
+                            break;
+                    }
                 }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
             }
         }
 
@@ -617,7 +636,7 @@ namespace A19_Ex01_FacebookAppUI
                     {
                        if (checkin != null)
                         {
-                            listBoxData.Items.Add(string.Format("\t {0}", checkin));
+                            listBoxData.Items.Add(string.Format("\t {0}", checkin.Message));
                         }
                     }
                 }
@@ -629,7 +648,7 @@ namespace A19_Ex01_FacebookAppUI
                     {
                         if (events != null)
                         {
-                            listBoxData.Items.Add(string.Format("\t {0}", events));
+                            listBoxData.Items.Add(string.Format("\t {0}", events.Name));
                         }
                     }
                 }
@@ -675,6 +694,78 @@ namespace A19_Ex01_FacebookAppUI
             }
         }
 
+        private void selectedAlbum(Album i_Album)
+        {
+            try
+            {
+                m_CurrentDataState = eDataState.General;
+                if (i_Album.Name != null)
+                {
+                    listBoxData.Items.Add(string.Format("Name: {0}", i_Album.Name));
+                }
+
+                if (i_Album.Count != null)
+                {
+                    listBoxData.Items.Add(string.Format("Number of photos: {0}", i_Album.Count));
+                }
+
+                if (i_Album.CreatedTime != null)
+                {
+                    listBoxData.Items.Add(string.Format("Created at: {0}", i_Album.CreatedTime));
+                }
+
+                if (i_Album.UpdateTime != null)
+                {
+                    listBoxData.Items.Add(string.Format("Updated at: {0}", i_Album.UpdateTime));
+                }
+
+                if (i_Album.Description != null)
+                {
+                    listBoxData.Items.Add("Description:");
+                    listBoxData.Items.Add(string.Format("\t {0}", i_Album.Description));
+                }
+
+                if (i_Album.Location != null)
+                {
+                    listBoxData.Items.Add(string.Format("Location: {0}", i_Album.Location));
+                }
+
+                if (i_Album.LikedBy != null)
+                {
+                    listBoxData.Items.Add("Liked by:");
+                    foreach (User liker in i_Album.LikedBy)
+                    {
+                        if (liker != null)
+                        {
+                            listBoxData.Items.Add(string.Format("\t {0}", liker.Name));
+                        }
+                    }
+                }
+
+                if (i_Album.Comments != null)
+                {
+                    listBoxData.Items.Add("Comments:");
+                    foreach (Comment comment in i_Album.Comments)
+                    {
+                        if (comment != null)
+                        {
+                            listBoxData.Items.Add(string.Format("\t {0}", comment.Message));
+                        }
+                    }
+                }
+
+                if (i_Album.CoverPhotoID != null)
+                {
+                    pictureBoxSelectedItemPictureBox.LoadAsync(i_Album.CoverPhotoID);
+                    pictureBoxSelectedItemPictureBox.Visible = true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
         private void selectedEvent(Event i_Event)
         {
             try
@@ -698,11 +789,11 @@ namespace A19_Ex01_FacebookAppUI
                 if (i_Event.AttendingUsers != null)
                 {
                     listBoxData.Items.Add("Attending:");
-                    foreach (object user in i_Event.AttendingUsers)
+                    foreach (User user in i_Event.AttendingUsers)
                     {
                         if (user != null)
                         {
-                            listBoxData.Items.Add(string.Format("\t {0}", user));
+                            listBoxData.Items.Add(string.Format("\t {0}", user.Name));
                         }
                     }
                 }
