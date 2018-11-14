@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using A19_Ex01_FacebookAppLogic;
+using System.Threading;
 
 namespace A19_Ex01_FacebookAppUI
 {
@@ -20,6 +21,7 @@ namespace A19_Ex01_FacebookAppUI
         private eDataState m_LastDataState = eDataState.General;
         private ListBox.ObjectCollection m_CurrentStateListBoxItems;
         private List<object> m_LogicDataForListBox;
+        
 
         public FacebookUIForm()
         {
@@ -169,6 +171,7 @@ namespace A19_Ex01_FacebookAppUI
             this.buttonNewPost.TabIndex = 11;
             this.buttonNewPost.Text = "Post";
             this.buttonNewPost.UseVisualStyleBackColor = true;
+            this.buttonNewPost.Click += new System.EventHandler(this.buttonNewPost_Click);
             // 
             // buttonAlbumsData
             // 
@@ -321,6 +324,31 @@ namespace A19_Ex01_FacebookAppUI
             listBoxData.Items.Clear();
             m_LogicDataForListBox.Clear();
             m_CurrentStateListBoxItems.Clear();
+
+            switch (m_CurrentDataState)
+            {
+                case eDataState.Albums:
+                    changeDataAlbums();
+                    break;
+                case eDataState.Events:
+                    changeDataEvents();
+                    break;
+                case eDataState.Friends:
+                    changeDataFriends();
+                    break;
+                case eDataState.SetNewPost:
+                    // Add Code
+                    break;
+                case eDataState.Trends:
+                    changeDataTrends();
+                    break;
+                case eDataState.WallPosts:
+                    changeDataWallPosts();
+                    break;
+                case eDataState.WeekSummery:
+                    changeDataWeekSummery();
+                    break;
+            }
         }
 
         private void buttonFriendsData_Click(object sender, EventArgs e)
@@ -328,6 +356,17 @@ namespace A19_Ex01_FacebookAppUI
             try
             {
                 changeState(eDataState.Friends, "Friends");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void changeDataFriends()
+        {
+            try
+            {
                 foreach (User friend in m_LogicHandler.GetFriends())
                 {
                     if (friend != null)
@@ -350,10 +389,20 @@ namespace A19_Ex01_FacebookAppUI
             try
             {
                 changeState(eDataState.WallPosts, "My Wall");
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
 
+        private void changeDataWallPosts()
+        {
+            try
+            {
                 foreach (Post post in m_LogicHandler.GetWallPosts())
                 {
-                    if(post.Message != null)
+                    if (post.Message != null)
                     {
                         // for a clean Tostring of the object
                         listBoxData.Items.Add(post.Message);
@@ -362,7 +411,7 @@ namespace A19_Ex01_FacebookAppUI
                     }
                 }
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
@@ -370,7 +419,11 @@ namespace A19_Ex01_FacebookAppUI
 
         private void buttonTrendsData_Click(object sender, EventArgs e)
         {
-            m_CurrentDataState = eDataState.Trends;
+            // TODO: ADD CODE
+        }
+
+        private void changeDataTrends()
+        {
             // TODO: ADD CODE
         }
 
@@ -379,7 +432,17 @@ namespace A19_Ex01_FacebookAppUI
             try
             {
                 changeState(eDataState.Events, "Events");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
 
+        private void changeDataEvents()
+        {
+            try
+            {
                 foreach (Event @event in m_LogicHandler.GetEvents())
                 {
                     if (@event.Name != null)
@@ -402,7 +465,17 @@ namespace A19_Ex01_FacebookAppUI
             try
             {
                 changeState(eDataState.Albums, "Albums");
-                
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+        private void changeDataAlbums()
+        {
+            try
+            {
                 foreach (Album album in m_LogicHandler.GetAlbums())
                 {
                     if (album.Name != null)
@@ -422,7 +495,11 @@ namespace A19_Ex01_FacebookAppUI
 
         private void buttonWeekSummeryData_Click(object sender, EventArgs e)
         {
-            m_CurrentDataState = eDataState.WeekSummery;
+            // TODO: ADD CODE
+        }
+
+        private void changeDataWeekSummery()
+        {
             // TODO: ADD CODE
         }
 
@@ -654,6 +731,11 @@ namespace A19_Ex01_FacebookAppUI
             this.pictureBoxSelectedItemPictureBox.Visible = false;
             this.pictureBoxSelectedItemPictureBox.Image = null;
             this.buttonBackListBox.Visible = false;
+        }
+
+        private void buttonNewPost_Click(object sender, EventArgs e)
+        {
+            // Add Code
         }
     }
 }
