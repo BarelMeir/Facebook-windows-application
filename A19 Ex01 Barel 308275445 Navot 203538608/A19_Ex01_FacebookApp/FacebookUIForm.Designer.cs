@@ -31,5 +31,21 @@
 
         private System.Windows.Forms.Label labelMyProfile;
         private System.Windows.Forms.PictureBox pictureBoxProfilePicture;
+        private System.Windows.Forms.ListBox listBoxData;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelBirthday;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelLocation;
+        private System.Windows.Forms.Label labelDataHeader;
+        private System.Windows.Forms.Button buttonFriendsData;
+        private System.Windows.Forms.Button buttonEventsData;
+        private System.Windows.Forms.Button buttonWallData;
+        private System.Windows.Forms.Button buttonNewPost;
+        private System.Windows.Forms.Button buttonAlbumsData;
+        private System.Windows.Forms.Button buttonTrendsData;
+        private System.Windows.Forms.Button buttonWeekSummeryData;
+        private System.Windows.Forms.TextBox textBoxNewPost;
+        private System.Windows.Forms.Button buttonBackListBox;
+        private System.Windows.Forms.PictureBox pictureBoxSelectedItemPictureBox;
     }
 }

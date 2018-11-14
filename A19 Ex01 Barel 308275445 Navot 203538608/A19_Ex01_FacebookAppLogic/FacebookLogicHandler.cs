@@ -81,5 +81,129 @@ namespace A19_Ex01_FacebookAppLogic
                 throw exception;
             }
         }
+
+        // ---------------------------------------------------------------
+
+        public List<User> GetFriends()
+        {
+            try
+            {
+                List<User> listOfFriends = m_DataHandler.FetchFriends();
+                return listOfFriends;
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public User GetUser()
+        {
+            try
+            {
+                return m_DataHandler.FetchUserInfo();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public string GetProfileName()
+        {
+            try
+            {
+                return m_DataHandler.FetchProfileName();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public string GetBirthday()
+        {
+            try
+            {
+                return m_DataHandler.FetchBirthday();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public string GetLocation()
+        {
+            try
+            {
+                return m_DataHandler.FetchLocation();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public string GetProfilePicture()
+        {
+            try
+            {
+                return m_DataHandler.FetchProfilePicture();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public string GetEmail()
+        {
+            try
+            {
+                return m_DataHandler.FetchEmail();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public List<Album> GetAlbums()
+        {
+            try
+            {
+                return m_DataHandler.FetchAlbums();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+        //-------------------------------------------------------------
+
+        public List<Page> GetPages()
+        {
+            try
+            {
+                return m_DataHandler.FetchPages();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
+
+        public List<Post> GetWallWeekSummery()
+        {
+            try
+            {
+                return m_DataHandler.FetchWallWeekSummery();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
     }
 }
