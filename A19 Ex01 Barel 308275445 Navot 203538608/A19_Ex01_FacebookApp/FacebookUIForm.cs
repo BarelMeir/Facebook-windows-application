@@ -21,7 +21,8 @@ namespace A19_Ex01_FacebookAppUI
         private eDataState m_LastDataState = eDataState.General;
         private ListBox.ObjectCollection m_CurrentStateListBoxItems;
         private List<object> m_LogicDataForListBox;
-        
+        private Thread m_thread;
+        private DataWrapper m_DataWrapper;
 
         public FacebookUIForm()
         {
@@ -31,6 +32,8 @@ namespace A19_Ex01_FacebookAppUI
             fetchUserInfo();
             m_CurrentStateListBoxItems = new ListBox.ObjectCollection(listBoxData);
             m_LogicDataForListBox = new List<object>();
+            m_DataWrapper = new DataWrapper(m_LogicHandler);
+            m_thread = new Thread(new ThreadStart(m_DataWrapper.FetchFriends));
         }
 
         private void InitializeComponent()
@@ -334,7 +337,9 @@ namespace A19_Ex01_FacebookAppUI
                     changeDataEvents();
                     break;
                 case eDataState.Friends:
-                    changeDataFriends();
+                    //changeDataFriends();
+                    m_thread.Start();
+                    ThreadchangeDataFriends();
                     break;
                 case eDataState.SetNewPost:
                     // Add Code
@@ -383,6 +388,33 @@ namespace A19_Ex01_FacebookAppUI
                 MessageBox.Show(exception.Message);
             }
         }
+
+
+        private void ThreadchangeDataFriends()
+        {
+            try
+            {
+                listBoxData.Items.Add("Loading Friends...");
+                m_thread.Join();
+                foreach (User friend in m_DataWrapper.FetchedData)
+                {
+                    if (friend != null)
+                    {
+                        // for a clean Tostring of the object
+                        listBoxData.Items.Add(string.Format("{0}, {1}", friend.Name, friend.Gender));
+                        // to save the actual object (to expand selected)
+                        m_LogicDataForListBox.Add(friend);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
+
+
+
 
         private void buttonWallData_Click(object sender, EventArgs e)
         {
