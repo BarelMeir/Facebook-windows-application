@@ -451,12 +451,35 @@ namespace A19_Ex01_FacebookAppUI
 
         private void buttonTrendsData_Click(object sender, EventArgs e)
         {
-            // TODO: ADD CODE
+            try
+            {
+                changeState(eDataState.Trends, "My Trend Pages");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void changeDataTrends()
         {
-            // TODO: ADD CODE
+            try
+            {
+                foreach (Page page in m_LogicHandler.GetTrendPages())
+                {
+                    if (page != null)
+                    {
+                        // for a clean Tostring of the object
+                        listBoxData.Items.Add(string.Format("{0}, has a {1} likes",page.Name, page.LikesCount));
+                        // to save the actual object (to expand selected)
+                        m_LogicDataForListBox.Add(page);
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void buttonEventsData_Click(object sender, EventArgs e)

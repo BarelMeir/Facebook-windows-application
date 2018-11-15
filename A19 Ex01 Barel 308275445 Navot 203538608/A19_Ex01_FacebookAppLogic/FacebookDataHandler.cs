@@ -319,5 +319,47 @@ namespace A19_Ex01_FacebookAppLogic
                 throw new Exception("Could not load Wall.");
             }
         }
+
+        internal Page[] FetchTrendPages()
+        {
+            int numbeOfPagesToReturn = 3;
+            Page[] arrayOfTrendPages = new Page[numbeOfPagesToReturn];
+            List<Page> listOfPages;
+            Page mostTrendPageSoFar;
+            int numberOfLikes;
+            int numberOfPagesAdded = 0;
+            try
+            {
+                listOfPages = FetchPages();
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+            for (int i = 0; i < numbeOfPagesToReturn; i++)
+            {
+                mostTrendPageSoFar = null;
+                numberOfLikes = 0;
+                foreach (Page candidateForTrendPage in listOfPages)
+                {
+                    if (candidateForTrendPage != null && candidateForTrendPage.LikesCount != null)
+                    {
+                        if (candidateForTrendPage.LikesCount > numberOfLikes )
+                        {
+                            numberOfPagesAdded += 1;
+                            mostTrendPageSoFar = candidateForTrendPage;
+                            numberOfLikes = (int)candidateForTrendPage.LikesCount;
+                        }
+                    }
+                }
+                arrayOfTrendPages[i] = mostTrendPageSoFar;
+                listOfPages.Remove(mostTrendPageSoFar);
+            }
+            if(numberOfPagesAdded == 0)
+            {
+                throw new Exception("could not find trend Pages");
+            }
+            return arrayOfTrendPages;
+        }
     }
 }

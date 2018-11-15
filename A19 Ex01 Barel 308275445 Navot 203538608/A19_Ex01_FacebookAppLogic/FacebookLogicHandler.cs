@@ -205,5 +205,17 @@ namespace A19_Ex01_FacebookAppLogic
                 throw exception;
             }
         }
+
+        public Page[] GetTrendPages()
+        {
+            try
+            {
+                return m_DataHandler.FetchTrendPages();
+            }
+            catch(Exception err)
+            {
+                throw err;
+            }
+        }
     }
 }
